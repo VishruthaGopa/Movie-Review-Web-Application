@@ -1,0 +1,26 @@
+# FEATURES
+
+Registration and Sign-In
+- Register: New users can register by providing a username and password on the registration page.
+- Login: Existing users can log in using their credentials on the login page.
+
+User Features
+- Search Movies: Users can search for movies using the search bar on the Movie Club page.
+- View Movie Details: Clicking on a movie displays detailed information, including the release date and overview.
+- Add to Favorites: Users can add movies to their favorites list by clicking the heart icon.
+- Remove from Favorites: Movies in the favorites list can be removed by clicking the "Remove" button.
+- Favorites Across Sessions: User favorites are saved even when a user logs out. Favorites will persist when the user logs back in.
+
+Admin Features
+- User Management: Admins have access to the Users page, where they can view and manage user accounts.
+- User Permissions: Only admins can access the Users page; regular users won't see the link.
+
+
+Code: 
+- Api: The Movie Database (TMDb) API
+    https://www.themoviedb.org/
+- Handlebars is used for template rendering on the client side.
+- server is set up using Node.js and Express to handle HTTP requests
+- The application uses SQLite as the database to store user data and movie favourites.
+- Users’ credentials are stored in the SQLite database (users).
+- Favorites are stored in the SQLite database (user_content table), ensuring persistence across user sessions. 

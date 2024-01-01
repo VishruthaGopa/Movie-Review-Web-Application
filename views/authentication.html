@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Authentication</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #authentication-container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0074ba;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005082;
+    }
+
+    .error-message {
+      color: rgb(119, 37, 37);
+      margin-top: 10px;
+    }
+
+    .success-message {
+      color: rgb(20, 91, 20);
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="authentication-container">
+    <div id="registration-section">
+      <h2>Welcome to Movie Flix !</h2>
+      <h3>Registration</h3>
+      <input type="text" id="regUsername" placeholder="Enter username">
+      <input type="password" id="regPassword" placeholder="Enter password">
+      <button id="registerButton">Register</button>
+      <div id="registration-message" class="success-message"></div>
+    </div>
+
+    <div id="login-section">
+      <h3>Login</h3>
+      <input type="text" id="loginUsername" placeholder="Enter username">
+      <input type="password" id="loginPassword" placeholder="Enter password">
+      <button id="loginButton">Login</button>
+      <div id="login-error" class="error-message"></div>
+    </div>
+  </div>
+
+  <script src="js/authentication.js"></script>
+
+</body>
+
+</html>

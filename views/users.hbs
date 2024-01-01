@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 20px;
+      background-color: #eaeaea; /* Set the background color to match /movieclub */
+    }
+
+    h1 {
+      color: #3a4660; /* Set the text color to white or a color that contrasts well */
+    }
+
+    .user-entry {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff; /* Set a background color for each user entry */
+      color: #333; /* Set text color to a color that contrasts well with the background */
+    }
+  </style>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <div>
+    {{#each userEntries}}
+      <div class="user-entry">
+        <p><strong>User ID:</strong> {{this.userid}}</p>
+        <p><strong>Password:</strong> {{this.password}}</p>
+        <p><strong>Role:</strong> {{this.role}}</p>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>

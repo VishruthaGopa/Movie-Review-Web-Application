@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>Movie Club</title>
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="logo/movie.jpg" alt="Movie Club Logo">
+        </div>
+        <h1 class="site-name">MOVIE FLIX</h1>
+        <button id="logoutButton">Logout</button>
+    </header>
+
+    <section class="favorites" id="favorites">
+        <button class="userList-btn" id="user-list">Users List</button>
+        <h2>Favorites</h2>
+        <div id="favorites-list"></div>
+    </section>
+    
+
+    <div class="search">
+        <div class="wrapper">
+            Enter Movie Name: <input type="text" id="movie" />
+            <button id="submit_button"  style="margin-bottom: 50px;">Submit</button>
+        </div>
+        <div id="moviedetails"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

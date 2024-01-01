@@ -1,0 +1,37 @@
+NOTES FOR MYSELF ABOUT SQLite
+
+------------------------------------------------------------------------
+# Two tables in movie_database.db
+users
+user_content
+
+# Create table
+CREATE TABLE new_users (id INTEGER PRIMARY KEY AUTOINCREMENT, userid TEXT, password TEXT, role TEXT); 
+
+CREATE TABLE user_content (user_id INTEGER, movie_id INTEGER, title TEXT, release_date TEXT, overview TEXT, timestamp DATETIME DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (user_id) REFERENCES users(id), UNIQUE (user_id, movie_id));
+
+
+# Insert values into table
+INSERT INTO users (user_id, password, role) VALUES ('guest1', 'guest_password', 'guest');
+
+
+# View table
+.tables users
+.mode column
+.header on
+select * from users;
+
+
+# View schema
+.schema users
+.schema user_content
+
+# Delete rows from tables where user_id is '1'
+DELETE FROM user_content WHERE user_id='1';
+
+# Database Sample Data for testing
+userid  password  role
+------  --------  -----
+guest1  pwd       guest
+guest2  pwd2      guest
+vish    vish123   admin
